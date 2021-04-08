@@ -48,9 +48,11 @@
 - plikZUzytkownikami : PlikZUzytkownikami
 -
 + rejestracjaUzytkownika() : void
-+ logowanieUzytkownkia() : Integer
++ logowanieUzytkownika() : Integer
++ wylogowanieUzytkownika() : void
 + wypiszWszystkichUzytkownikow() : void
 + wczytajUzytkownikowZPliku() : void
++ zmianaHaslaZalogowanegoUzytkownika() : void
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - pobierzIdNowegoUzytkownika() : Integer
 - czyIstniejeLogin() : Bool</panel_attributes>
@@ -72,6 +74,7 @@
 + PlikZUzytkownikami()
 + dopiszUzytkownikaDoPliku() : void
 + wczytajUzytkownikowZPliku() : vector &lt;Uzytkownik&gt;
++ zapiszWszystkichUzytkownikowDoPliku() : void
 - czyPlikJestPusty() : Bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : String
 </panel_attributes>

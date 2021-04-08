@@ -30,6 +30,7 @@ public:
     int pobierzIdZalogowanegoUzytkownika();
     void ustawIdZalogowanegoUzytkownika(int Id);
     void wylogowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H
