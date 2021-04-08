@@ -15,7 +15,7 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     uzytkownikMenedzer.logowanieUzytkownika();
 }
 
-int KsiazkaAdresowa::getIdZalogowanegoUzytkownika()
+void KsiazkaAdresowa::wylogowanieUzytkownika()
 {
-    return uzytkownikMenedzer.getIdZalogowanegoUzytkownika();
+    uzytkownikMenedzer.wylogowanieUzytkownika();
 }

@@ -27,7 +27,9 @@ public:
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
     void logowanieUzytkownika();
-    int getIdZalogowanegoUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+    void ustawIdZalogowanegoUzytkownika(int Id);
+    void wylogowanieUzytkownika();
 };
 
 #endif // UZYTKOWNIKMENEDZER_H
