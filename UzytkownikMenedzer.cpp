@@ -98,7 +98,19 @@ void UzytkownikMenedzer::logowanieUzytkownika()
     return;
 }
 
-int UzytkownikMenedzer::getIdZalogowanegoUzytkownika()
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
+}
+
+void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int Id)
+{
+    idZalogowanegoUzytkownika = Id;
+}
+
+void UzytkownikMenedzer::wylogowanieUzytkownika()
+{
+    cout << "Zostales wylogowany." << endl << endl;
+    system("pause");
+    idZalogowanegoUzytkownika = 0;
 }
