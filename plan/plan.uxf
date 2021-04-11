@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
-      <w>350</w>
-      <h>250</h>
+      <w>540</w>
+      <h>340</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 -
@@ -27,8 +27,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>10</x>
-      <y>550</y>
+      <x>0</x>
+      <y>640</y>
       <w>540</w>
       <h>160</h>
     </coordinates>
@@ -42,8 +42,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>10</x>
-      <y>260</y>
+      <x>0</x>
+      <y>350</y>
       <w>540</w>
       <h>280</h>
     </coordinates>
@@ -53,11 +53,12 @@
 - uzytkownicy : vector &lt;Uzytkownik&gt;
 - plikZUzytkownikami : PlikZUzytkownikami
 -
++ UzytkownikMenedzer()
 + rejestracjaUzytkownika() : void
-+ logowanieUzytkownika() : Integer
-+ wylogowanieUzytkownika() : void
 + wypiszWszystkichUzytkownikow() : void
 + wczytajUzytkownikowZPliku() : void
++ logowanieUzytkownika() : void
++ wylogowanieUzytkownika() : void
 + zmianaHaslaZalogowanegoUzytkownika() : void
 - podajDaneNowegoUzytkownika() : Uzytkownik
 - pobierzIdNowegoUzytkownika() : Integer
@@ -67,8 +68,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>10</x>
-      <y>720</y>
+      <x>0</x>
+      <y>810</y>
       <w>540</w>
       <h>210</h>
     </coordinates>
@@ -80,33 +81,35 @@
 + dopiszUzytkownikaDoPliku() : void
 + wczytajUzytkownikowZPliku() : vector &lt;Uzytkownik&gt;
 + zapiszWszystkichUzytkownikowDoPliku() : void
-- czyPlikJestPusty() : Bool
 - zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : String
+- pobierzDaneUzytkownika() : Uzytkownik</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1030</y>
+      <w>540</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>MetodyPomocnicze
+-
++ wczytajLinie() : String
++ konwerjsaIntNaString() : String
++ konwersjaStringNaInt() : Integer
++ pobierzLiczbe() : Integer
++ zamienPierwszaLitereNaDuzaAPozostaleNaMale() : String
++ czyPlikJestPusty() : Bool
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>10</x>
-      <y>940</y>
-      <w>350</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>MetodyPomocnicze
--
-+ konwerjsaIntNaString() : String
-+ wczytajLinie() : String
-+ konwersjaStringNaInt() : Integer
-+ pobierzLiczbe() : Integer</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>560</x>
-      <y>260</y>
-      <w>490</w>
+      <x>550</x>
+      <y>350</y>
+      <w>550</w>
       <h>280</h>
     </coordinates>
     <panel_attributes>AdresatMenedzer
@@ -116,17 +119,19 @@
 - adresaci : vector &lt;Adresat&gt;
 - plikZAdresatami : PlikZAdresatami
 -
++ AdresatMenedzer()
 + wczytajAdresatowZalogowanegoUzytkownikaZPliku() : void
 + dodajAdresata() : void
-+ wyswietlWszystkichAdresatow() : void</panel_attributes>
++ wyswietlWszystkichAdresatow() : void
++ wyczyscDaneZWektoraUzytkownicy() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>550</y>
-      <w>490</w>
+      <x>550</x>
+      <y>640</y>
+      <w>550</w>
       <h>160</h>
     </coordinates>
     <panel_attributes>Adresat
@@ -143,9 +148,9 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>720</y>
-      <w>490</w>
+      <x>550</x>
+      <y>810</y>
+      <w>550</w>
       <h>210</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
@@ -153,9 +158,12 @@
 - nazwaPlikuZAdresatami : String
 -
 + PlikZAdresatami()
++ dopiszAdresataDoPliku() : void
++ wczytajAdresatowZalogowanegoUzytkownikaZPliku() : Integer
 - pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : Integer
 - pobierzIdAdresataZDanychOddzielonychPionowymiKreskami() : Integer
-</panel_attributes>
+- zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami() : String
+- pobierzDaneAdresata : String</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

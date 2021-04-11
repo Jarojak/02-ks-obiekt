@@ -4,14 +4,18 @@
 #include <iostream>
 
 #include "UzytkownikMenedzer.h"
+#include "AdresatMenedzer.h"
 
 using namespace std;
 
 class KsiazkaAdresowa{
     UzytkownikMenedzer uzytkownikMenedzer;
-
+    AdresatMenedzer adresatMenedzer;
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) :
+        uzytkownikMenedzer(nazwaPlikuZUzytkownikami),
+        adresatMenedzer(nazwaPlikuZAdresatami)
+    {
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();
     };
     void rejestracjaUzytkownika();
@@ -19,6 +23,9 @@ public:
     void logowanieUzytkownika();
     void wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+    void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif // KSIAZKAADRESOWA_H

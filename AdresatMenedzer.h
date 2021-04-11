@@ -17,6 +17,18 @@ class AdresatMenedzer
     int idUsunietegoAdresata;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
+
+    Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
+    void wyswietlDaneAdresata(Adresat adresat);
+public:
+    AdresatMenedzer(string nazwaPlikuZAdresatami) :
+        plikZAdresatami(nazwaPlikuZAdresatami)
+    {
+    };
+    void dodajAdresata(int idZalogowanegoUzytkownika);
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    void wyczyscDaneZWektoraUzytkownicy();
+    void wyswietlWszystkichAdresatow();
 };
 
 #endif // ADRESATMENEDZER_H

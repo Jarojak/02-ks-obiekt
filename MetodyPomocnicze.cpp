@@ -6,10 +6,49 @@ string MetodyPomocnicze::wczytajLinie(){
     return wejscie;
 }
 
-string MetodyPomocnicze::konwerjsaIntNaString(int liczba)
+string MetodyPomocnicze::konwersjaIntNaString(int liczba)
 {
     ostringstream ss;
     ss << liczba;
     string str = ss.str();
     return str;
+}
+
+int MetodyPomocnicze::konwersjaStringNaInt(string liczba)
+{
+    int liczbaInt;
+    istringstream iss(liczba);
+    iss >> liczbaInt;
+
+    return liczbaInt;
+}
+
+string MetodyPomocnicze::pobierzLiczbe(string tekst, int pozycjaZnaku)
+{
+    string liczba = "";
+    while(isdigit(tekst[pozycjaZnaku]) == true)
+    {
+        liczba += tekst[pozycjaZnaku];
+        pozycjaZnaku ++;
+    }
+    return liczba;
+}
+
+string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst)
+{
+    if (!tekst.empty())
+    {
+        transform(tekst.begin(), tekst.end(), tekst.begin(), ::tolower);
+        tekst[0] = toupper(tekst[0]);
+    }
+    return tekst;
+}
+
+bool MetodyPomocnicze::czyPlikJestPusty(fstream &plikTekstowy)
+{
+    plikTekstowy.seekg(0, ios::end);
+    if (plikTekstowy.tellg() == 0)
+        return true;
+    else
+        return false;
 }
