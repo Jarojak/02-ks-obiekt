@@ -32,6 +32,7 @@ public:
     int pobierzIdZalogowanegoUzytkownika();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void usunAdresata();
 };
 
 #endif // KSIAZKAADRESOWA_H
