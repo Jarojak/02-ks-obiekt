@@ -12,6 +12,7 @@ class KsiazkaAdresowa{
     UzytkownikMenedzer uzytkownikMenedzer;
     AdresatMenedzer *adresatMenedzer;
     const string NAZWA_PLIKU_Z_ADRESATAMI;
+    char wybor;
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) :
         uzytkownikMenedzer(nazwaPlikuZUzytkownikami),
@@ -36,6 +37,9 @@ public:
     void edytujAdresata();
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    void wybierzOpcjeZMenuGlownego();
+    void wybierzOpcjeZMenuUzytkownika();
+    char pobierzWybor();
 };
 
 #endif // KSIAZKAADRESOWA_H
