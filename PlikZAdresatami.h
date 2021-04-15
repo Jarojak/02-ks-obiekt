@@ -8,10 +8,10 @@
 
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
+#include "PlikTekstowy.h"
 
-class PlikZAdresatami
+class PlikZAdresatami : public PlikTekstowy
 {
-    const string NAZWA_PLIKU_Z_ADRESATAMI;
     const string NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI;
     int idOstatniegoAdresata;
 
@@ -23,7 +23,7 @@ class PlikZAdresatami
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_tymczasowo.txt") :
-        NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami),
+        PlikTekstowy(nazwaPlikuZAdresatami),
         NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI(nazwaTymczasowegoPlikuZAdresatami)
         {};
     void dopiszAdresataDoPliku(Adresat adresat);
