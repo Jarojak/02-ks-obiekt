@@ -20,6 +20,7 @@ class AdresatMenedzer
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
     int podajIdWybranegoAdresata();
+    char wybierzOpcjeZMenuEdycja();
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) :
         plikZAdresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
@@ -31,6 +32,7 @@ public:
     void wyczyscDaneZWektoraUzytkownicy();
     void wyswietlWszystkichAdresatow();
     int usunAdresata();
+    void edytujAdresata();
 };
 
 #endif // ADRESATMENEDZER_H
