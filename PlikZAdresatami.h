@@ -24,7 +24,8 @@ class PlikZAdresatami
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami, string nazwaTymczasowegoPlikuZAdresatami = "Adresaci_tymczasowo.txt") :
         NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami),
-        NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI(nazwaTymczasowegoPlikuZAdresatami) {};
+        NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI(nazwaTymczasowegoPlikuZAdresatami)
+        {};
     void dopiszAdresataDoPliku(Adresat adresat);
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     void ustawIdOstatniegoAdresata(int noweIdOstaniegoAdresata);
