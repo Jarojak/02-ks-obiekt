@@ -167,7 +167,7 @@ void PlikZAdresatami::usunWybranegoAdresataZPliku(int idUsuwanegoAdresata)
         {
             if(idUsuwanegoAdresata == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
             {
-                ;
+
             }
             else
             {
@@ -181,6 +181,11 @@ void PlikZAdresatami::usunWybranegoAdresataZPliku(int idUsuwanegoAdresata)
 
         usunPlik(pobierzNazwePliku());
         zmienNazwePliku(NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI, pobierzNazwePliku());
+    }
+
+    if(idUsuwanegoAdresata == idOstatniegoAdresata)
+    {
+        idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(ostaniaLiniaWPlikuTekstowym());
     }
 }
 
