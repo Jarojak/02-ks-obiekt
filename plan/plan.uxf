@@ -196,9 +196,9 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>420</x>
+      <x>360</x>
       <y>970</y>
-      <w>250</w>
+      <w>390</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>PlikTekstowy
@@ -206,7 +206,8 @@
 -NAZWA_PLIKU : String
 -
 +PlikTekstowy()
-+czyPlikJestPusty() : Bool</panel_attributes>
++czyPlikJestPusty() : Bool
++ostaniaLiniaWPlikuTekstowym() : String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
